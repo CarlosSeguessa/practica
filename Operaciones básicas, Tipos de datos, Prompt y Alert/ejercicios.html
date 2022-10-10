@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Ejercicios</h1>
+    <p>
+      Programa que muestra un prompt donde el usuario ingresa un número, luego
+      muestra otro prompt pidiendo otro número, finalmente el programa muestra
+      una alerta con el resultado de la suma.
+    </p>
+    <button onclick="sumWithPrompt()">Click me</button>
+
+    <p>
+      Programa donde el usuario ingrese en un prompt la temperatura en Celcius y
+      el programa muestre en una alerta la temperatura en Fahrenheit.
+    </p>
+    <button onclick="celsiusToFahrenheit()">Click me</button>
+
+    <p>
+      Pedir un número a un usuario a través de un prompt y luego dividirlo por
+      10, ejemplo: 5 / 10 igual 0.5
+    </p>
+    <button onclick="divideByTen()">Click me</button>
+
+    <p>
+      Si a = [1,2,3] crear un script que determine de muestre un alert del tipo de dato de a.
+    </p>
+    <button onclick="divideByTen()">Click me</button>
+
+    <script>
+      const sumWithPrompt = () => {
+        let a = prompt("Ingrese el primer número");
+        let b = prompt("Ingrese el segundo número");
+        let c = Number(a) + Number(b);
+        alert(c);
+      };
+
+      const celsiusToFahrenheit = () => {
+        let celsius = prompt("Ingrese la temperatura en grados Celsius");
+        let fahrenheit = (Number(celsius) * 9) / 5 + 32;
+        alert(` ${celsius} Grados celsius a Fahrenheit: ${fahrenheit}`);
+      };
+
+      const divideByTen = () => {
+        let number = prompt("Ingrese un número");
+        let result = Number(number) / 10;
+        alert(result);
+      };
+
+      const dataType = () => {
+        let a = [1, 2, 3];
+        alert(typeof a);
+      };
+      
+    </script>
+  </body>
+</html>
