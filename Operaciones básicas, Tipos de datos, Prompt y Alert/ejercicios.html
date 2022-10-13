@@ -28,35 +28,35 @@
     <button onclick="divideByTen()">Click me</button>
 
     <p>
-      Si a = [1,2,3] crear un script que determine de muestre un alert del tipo de dato de a.
+      Si a = [1,2,3] crear un script que determine de muestre un alert del tipo
+      de dato de a.
     </p>
     <button onclick="dataType()">Click me</button>
 
     <script>
       const sumWithPrompt = () => {
-        let a = prompt("Ingrese el primer número");
-        let b = prompt("Ingrese el segundo número");
-        let c = Number(a) + Number(b);
-        alert(c);
-      };
+        let a = prompt('Ingrese el primer número')
+        let b = prompt('Ingrese el segundo número')
+        let c = Number(a) + Number(b)
+        alert(c)
+      }
 
       const celsiusToFahrenheit = () => {
-        let celsius = prompt("Ingrese la temperatura en grados Celsius");
-        let fahrenheit = (Number(celsius) * 9) / 5 + 32;
-        alert(` ${celsius} Grados celsius a Fahrenheit: ${fahrenheit}`);
-      };
+        let celsius = prompt('Ingrese la temperatura en grados Celsius')
+        let fahrenheit = (Number(celsius) * 9) / 5 + 32
+        alert(` ${celsius} Grados celsius a Fahrenheit: ${fahrenheit}`)
+      }
 
       const divideByTen = () => {
-        let number = prompt("Ingrese un número");
-        let result = Number(number) / 10;
-        alert(result);
-      };
+        let number = prompt('Ingrese un número')
+        let result = Number(number) / 10
+        alert(result)
+      }
 
       const dataType = () => {
-        let a = [1, 2, 3];
-        alert(typeof a);
-      };
-      
+        let a = [1, 2, 3]
+        alert(typeof a)
+      }
     </script>
   </body>
 </html>
