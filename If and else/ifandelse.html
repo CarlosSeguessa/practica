@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>Ejercicios If and else</h1>
+		<p>
+			Programa que determina si un número introducido en un Prompt es par o no,
+			la respuesta será mostrada en una alerta.
+		</p>
+		<button onclick="isPar()">Click me</button>
+		<p>
+			Programa que determina si un número introducido en un Prompt es divisible
+			por 5 o no, se mostrara el resultado en un console.log
+		</p>
+		<button onclick="isDivisibleByFive()">Click me</button>
+
+		<p>
+			Programa que determina si un número introducido en un popup es divisible
+			por 11 y 5 o no, mostrar el resultado con console.log
+		</p>
+		<button onclick="isDivisible()">Click me</button>
+		<p>
+			Programa que le pide al usuario dos números en un Prompt y luego muestre
+			en un alerta el número mayor.
+		</p>
+		<button onclick="isBigger()">Click me</button>
+		<p>
+			Programa que determina si un string introducido por un usuario empieza con
+			un número o con una letra.
+		</p>
+		<button onclick="isLetter()">Click me</button>
+		<p>
+			programa donde se introduzcan los tres ángulos internos de un triángulo y
+			se determine si el triángulo es válido o no.
+		</p>
+		<button onclick="isTriangle()">Click me</button>
+		<p>
+			programa en el que el programa escoge al azar un entero entre 1 y 10, el
+			usuario , luego a el usuario se le pedirá que introduzca un número en un
+			popup para intentar adivinarlo. Si la entrada del usuario coincide con el
+			número de conjetura, el programa mostrará un mensaje de "buen trabajo" de
+			lo contrario mostrará un mensaje de "No corresponde"
+		</p>
+		<button onclick="randomNumber()">Click me</button>
+		<script>
+			const isPar = () => {
+				let number = prompt('Ingrese un número')
+				if (number % 2 === 0) {
+					alert('El número es par')
+				} else {
+					alert('El número es impar')
+				}
+			}
+			const isDivisibleByFive = () => {
+				let number = prompt('Ingrese un número')
+				if (number % 5 === 0) {
+					console.log('El número es divisible por 5')
+				} else {
+					console.log('El número no es divisible por 5')
+				}
+			}
+			const isDivisible = () => {
+				let number = prompt('Ingrese un número')
+				if (number % 11 === 0 && number % 5 === 0) {
+					console.log('El número es divisible por 11 y 5')
+				} else {
+					console.log('El número no es divisible por 11 y 5')
+				}
+			}
+			const isBigger = () => {
+				let number1 = prompt('Ingrese un número')
+				let number2 = prompt('Ingrese un número')
+				if (number1 > number2) {
+					alert('El número mayor es ' + number1)
+				} else {
+					alert('El número mayor es ' + number2)
+				}
+			}
+			const isBiggerWithTernary = () => {
+				let number1 = prompt('Ingrese un número')
+				let number2 = prompt('Ingrese un número')
+				number1 > number2
+					? alert('El número mayor es ' + number1)
+					: alert('El número mayor es ' + number2)
+			}
+
+			const isLetter = () => {
+				let string = prompt('Ingrese un string')
+				if (string[0] >= 'a' && string[0] <= 'z') {
+					console.log('El string empieza con una letra')
+				} else {
+					console.log('El string empieza con un número')
+				}
+			}
+			const isTriangle = () => {
+				let angle1 = prompt('Ingrese un ángulo')
+				let angle2 = prompt('Ingrese un ángulo')
+				let angle3 = prompt('Ingrese un ángulo')
+				if (angle1 + angle2 + angle3 === 180) {
+					console.log('El triángulo es válido')
+				} else {
+					console.log('El triángulo no es válido')
+				}
+			}
+			const word = 'Hola'
+			const startWithUpperCase = () => {
+				if (word[0] === word[0].toUpperCase()) {
+					console.log('La palabra empieza con mayúscula')
+				} else {
+					console.log('La palabra no empieza con mayúscula')
+				}
+			}
+			const isLeapYear = () => {
+				let year = prompt('Ingrese un año')
+				if (year % 4 === 0 && year % 100 !== 0) {
+					console.log('El año es bisiesto')
+				} else {
+					console.log('El año no es bisiesto')
+				}
+			}
+			const randomNumber = () => {
+				let number = Math.floor(Math.random() * 10) + 1
+				let userNumber = prompt('Ingrese un número')
+				if (number === userNumber) {
+					alert('Buen trabajo')
+				} else {
+					alert('No corresponde')
+				}
+			}
+		</script>
+	</body>
+</html>
