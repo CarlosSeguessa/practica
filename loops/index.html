@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>Ejercicios Loops</h1>
+		<p>
+			Mostrar todos los números de 1 a n aumentando de 1 en 1 donde n lo ingresa
+			el usuario en un prompt.
+		</p>
+		<button onclick="showNumbers()">Click me</button>
+		<p>
+			Mostrar todos los números de 1 a N aumentando de 2 en 2 donde n lo ingresa
+			el usuario en un prompt.
+		</p>
+		<button onclick="showNumbersTwo()">Click me</button>
+		<p>
+			Mostrar todos los números de N a 1 disminuyendo de 1 en 1 donde n lo
+			ingresa el usuario en un prompt.
+		</p>
+		<button onclick="showNumbersThree()">Click me</button>
+		<p>Escribir utilizando console.log la tabla del 9 hasta 9x10.</p>
+		<button onclick="tableOfNine()">Click me</button>
+		<p>
+			Pedir al usuario que ingrese un número en un prompt, hacer la suma de
+			todos los dígitos, validar que el número ingresado no contenga letras.
+		</p>
+		<button onclick="sumDigits()">Click me</button>
+		<script>
+			const showNumbers = () => {
+				let n = prompt('Ingrese un número')
+				for (let i = 1; i <= n; i++) {
+					console.log(i)
+				}
+			}
+			const showNumbersTwo = () => {
+				let n = prompt('Ingrese un número')
+				for (let i = 1; i <= n; i += 2) {
+					console.log(i)
+				}
+			}
+			const showNumbersThree = () => {
+				let n = prompt('Ingrese un número')
+				for (let i = n; i >= 1; i--) {
+					console.log(i)
+				}
+			}
+			const tableOfNine = () => {
+				for (let i = 1; i <= 10; i++) {
+					console.log(`9 x ${i} = ${9 * i}`)
+				}
+			}
+			const sumDigits = () => {
+				const numero = prompt('Ingrese un numero')
+				let suma = 0
+				for (let i = 0; i < numero.length; i++) {
+					if (isNaN(numero[i])) {
+						console.log('El dato no es un numero')
+						break
+					} else {
+						suma += parseInt(numero[i])
+					}
+				}
+				console.log('La suma de los digitos es: ' + suma)
+			}
+		</script>
+	</body>
+</html>
